@@ -1,0 +1,2 @@
+CREATE TYPE "public"."visibility" AS ENUM('public', 'private');--> statement-breakpoint
+ALTER TABLE "videos" ALTER COLUMN "visibility" SET DATA TYPE "public"."visibility" USING "visibility"::"public"."visibility";

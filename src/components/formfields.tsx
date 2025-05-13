@@ -14,12 +14,13 @@ const FormFields = ({
       {as === "textarea" ? (
         <textarea
           id={id}
-          name={value}
+          name={id}
+          value={value}
           placeholder={placeholder}
           onChange={onChange}
         />
       ) : as === "select" ? (
-        <select id={id} name={value} onChange={onChange}>
+        <select id={id} name={id} onChange={onChange}>
           {options?.map(({ label, value }) => (
             <option key={label} value={value}>
               {label}
@@ -29,7 +30,8 @@ const FormFields = ({
       ) : (
         <input
           id={id}
-          name={value}
+          name={id}
+          value={value}
           placeholder={placeholder}
           onChange={onChange}
         />
